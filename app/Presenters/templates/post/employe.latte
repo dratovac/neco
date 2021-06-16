@@ -1,0 +1,16 @@
+{block content}
+<div><h1 n:block="title">Zaměstnanci</h1></div>
+<div class="list">
+<p><a n:href="Homepage:default"><button type="button" class="btna">Zpět</button></a></p>
+<p><a n:href="Post:add"><button type="button" class="btna">Přidat zaměstnance</button></a></p>
+
+
+	{foreach $posts as $post}		
+			<div class="post"> 
+     			<h2><a n:href="Post:show $post->id">{$post->jmeno} {$post->prijmeni}</a></h2>
+			</div>					
+	{/foreach}
+    	
+</div>        
+{/block}
+      

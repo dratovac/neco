@@ -1,0 +1,15 @@
+{block content}
+<div class="list">
+    <h1>Týmy</h1>
+    <a n:href="Homepage:default"><button type="button" class="btna">Zpět</button></a></p>
+        {foreach $teams as $post}		
+                    <div class=""> 
+                        <h2><a n:href="Post:emploadd  $post->id">{$post->nazev}</a></h2>
+                    </div>			
+        {/foreach}
+    <div>    
+    <h2>Přidat tým:</a></h2>
+    {control teamaddForm}
+    </div>
+</div>
+{/block}

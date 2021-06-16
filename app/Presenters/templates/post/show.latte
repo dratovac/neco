@@ -1,0 +1,17 @@
+{block content}
+<div class="list">
+<a n:href="post:employe"><button type="button" class="btna">Zpět</button></a>
+
+
+
+<h1 n:block="title">{$post->jmeno} {$post->prijmeni}</h1>
+
+<h2>Pozice: {$post->vlastnost}</h2>
+<h2>ID: {$post->id}</h2>
+{control deletePerson}
+</div>
+
+
+
+
+

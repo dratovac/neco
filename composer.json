@@ -1,0 +1,10 @@
+{
+	"require": {
+		...
+	},
+	"config": {
+		"platform": {
+			"php": "8.0.6"   # verze PHP na hostingu
+		}
+	}
+}

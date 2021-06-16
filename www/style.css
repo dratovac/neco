@@ -1,0 +1,15 @@
+.btn{text-transform: uppercase; height: 70px; width: 400px; color: #fff; background-color: #a11010;  border: 0px;margin-bottom: 20px;  font-size: 1.5em;}
+.btna{text-transform: uppercase; height: 40px; width: 100%;background-color: #a11010;  color: #fff; border: 0px; font-size: 1.5em;}
+#frm-deletePerson table{margin: auto;}
+#frm-commentForm  table, #frm-teamaddForm table, #frm-teamsForm table {margin: auto; font-size:  2em;}
+#frm-teamsForm table tbody tr td{padding-bottom: 10px;}
+#frm-teamsForm table tbody tr td select{width: 400px; text-align: center;}
+
+.pic{background-image: url("obr1.webp"); background-repeat:no-repeat;  background-position: center;}
+.list{width: 600px; margin: auto;}
+td{font-size: 1.2em; padding-right: 0;}
+.list td:first-child{font-weight: 1000; font-size: 1.3em;}
+p a {font-size: 1em;}
+.btns{text-align: center;}
+h1{text-align: center; font-size: 3em; text-transform: uppercase;}
+h2{text-align: center; font-size: 2.1em; text-transform: uppercase;}

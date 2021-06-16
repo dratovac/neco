@@ -1,0 +1,93 @@
+{block content}
+
+<div><h1 n:block="title">Seznam týmů a jejich členů</h1></div>
+
+<div class="list">
+<p><a n:href="Homepage:default"><button type="button" class="btna">Zpět</button></a></p>
+{foreach $teams as $tymy}
+	<h2>{$tymy->nazev}</h2>	
+			<div> 
+     		<table>
+            <tr>
+            <td>Závodníci:
+               {foreach $propoj as $zamestnanci}
+             
+                   {if $zamestnanci->idTeams == $tymy->id}
+                            {foreach $posts as $lidi}
+                              {if $lidi->id == $zamestnanci->idemplo && $lidi->vlastnost == "závodník"}
+                              <td>{$lidi->jmeno} {$lidi->prijmeni} </td>
+                              {/if}             
+                            {/foreach}
+                   {/if}
+              
+               {/foreach}
+               </td>
+                <tr>
+               <td>Spolujezdci:
+               {foreach $propoj as $zamestnanci}
+            
+                   {if $zamestnanci->idTeams == $tymy->id}
+                            {foreach $posts as $lidi}
+                              {if $lidi->id == $zamestnanci->idemplo && $lidi->vlastnost == "spolujezdec"}
+                              <td>{$lidi->jmeno} {$lidi->prijmeni} </td>
+                              {/if}             
+                            {/foreach}
+                   {/if}
+              
+               {/foreach}
+               </td>
+               </tr>
+                <tr>
+               <td>Technici:
+               {foreach $propoj as $zamestnanci}
+                
+                   {if $zamestnanci->idTeams == $tymy->id}
+                            {foreach $posts as $lidi}
+                              {if $lidi->id == $zamestnanci->idemplo && $lidi->vlastnost == "technik"}
+                              <td>{$lidi->jmeno} {$lidi->prijmeni} </td>
+                              {/if}             
+                            {/foreach}
+                   {/if}
+              
+               {/foreach}
+               </td>
+                </tr>
+                <tr>
+                 <td>Manažeři:
+               {foreach $propoj as $zamestnanci}
+           
+                   {if $zamestnanci->idTeams == $tymy->id}
+                            {foreach $posts as $lidi}
+                              {if $lidi->id == $zamestnanci->idemplo && $lidi->vlastnost == "manažer"}
+                              <td>{$lidi->jmeno} {$lidi->prijmeni} </td>
+                              {/if}             
+                            {/foreach}
+                   {/if}
+              
+               {/foreach}
+               </td>
+                </tr>
+                <tr>
+                
+        <td>Fotografové:
+               {foreach $propoj as $zamestnanci}
+              
+                   {if $zamestnanci->idTeams == $tymy->id}
+                            {foreach $posts as $lidi}
+                              {if $lidi->id == $zamestnanci->idemplo && $lidi->vlastnost == "fotograf"}
+                              <td>{$lidi->jmeno} {$lidi->prijmeni} </td>
+                              {/if}             
+                            {/foreach}
+                   {/if}
+              
+               {/foreach}
+               </td>
+                </tr>
+               
+              
+	        </table>
+			</div>
+			
+		
+{/foreach}
+</div>
